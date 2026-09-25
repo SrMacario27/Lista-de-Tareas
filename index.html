@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Lista de Tareas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Cabecera con título y botón de modo oscuro -->
+        <div class="header-app">
+            <h1>📝 Mi Lista de Tareas</h1>
+            <button id="btn-modo" aria-label="Cambiar modo oscuro">🌙</button>
+        </div>
+
+        <!-- Formulario para agregar tareas -->
+        <form id="form-tarea">
+            <input
+                type="text"
+                id="input-tarea"
+                placeholder="¿Qué necesitas hacer?"
+                required
+            >
+            <input
+                type="date"
+                id="input-fecha"
+                required
+            >
+            <select id="input-categoria">
+                <option value="Personal">Personal</option>
+                <option value="Trabajo">Trabajo</option>
+                <option value="Estudio">Estudio</option>
+            </select>
+            <button type="submit">Agregar</button>
+        </form>
+
+        <!-- Filtros -->
+        <div class="filtros">
+            <button class="filtro activo" data-filtro="todas">Todas</button>
+            <button class="filtro" data-filtro="pendientes">Pendientes</button>
+            <button class="filtro" data-filtro="completadas">Completadas</button>
+        </div>
+
+        <!-- Lista de tareas -->
+        <ul id="lista-tareas">
+            <!-- Las tareas se agregarán aquí con JavaScript -->
+        </ul>
+
+        <!-- Contador -->
+        <p class="contador">
+            <span id="contador-pendientes">0</span> tareas pendientes
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
